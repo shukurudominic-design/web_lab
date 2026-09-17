@@ -1,19 +1,65 @@
+/* Typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+label,
+input,
+select,
+button,
+th,
+td {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+/* Color Palette */
+:root {
+    --background: #F4F7F6;
+    --primary: #1F3A5F;
+    --secondary: #2E6F95;
+    --button: #2E8B57;
+    --light-row: #EAF2F8;
+    --text: #333333;
+    --border: #CCCCCC;
+}
+
 /* Element selector */
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: var(--primary);
 }
 
 /* ID selector */
 #add-expense {
-    background-color: lightblue;
+    background-color: white;
     padding: 20px;
     margin-bottom: 20px;
 }
 
+/* Section headings */
+h2 {
+    color: var(--secondary);
+}
+
 /* Class selector */
 .expenses-section {
-    background-color: lightgray;
+    background-color: white;
     padding: 20px;
 }
 
@@ -21,6 +67,65 @@ h1 {
 input {
     padding: 8px;
     margin: 5px;
+}
+
+/* Expense Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light-row);
+}
+
+tr:hover {
+    background-color: #D6E4F0;
+}
+
+/* Buttons */
+button {
+    background-color: var(--button);
+    color: white;
+    cursor: pointer;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Advanced CSS Selectors */
+
+/* 1. Descendant selector */
+#add-expense input {
+    margin-bottom: 10px;
+}
+
+/* 2. Position pseudo-class */
+tr:nth-child(even) {
+    background-color: var(--light-row);
+}
+
+/* 3. Negation pseudo-class */
+input:not([type="date"]) {
+    border-radius: 4px;
+}
+
+/* 4. Focus pseudo-class */
+input:focus {
+    outline: 2px solid var(--secondary);
 }
 /* Expense Table */
 table {
@@ -31,53 +136,137 @@ table {
 
 th,
 td {
-    border: 1px solid #ccc;
+    border: 1px solid #CCCCCC;
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #1F3A5F;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #EAF2F8;
+}
+
+tr:hover {
+    background-color: #D6E4F0;
+}
+
+/* Add Expense Form */
+#add-expense {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+
+#add-expense form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-expense input,
+#add-expense select {
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-expense input:focus,
+#add-expense select:focus {
+    outline: 2px solid #2E6F95;
+}
+
+#add-expense button {
+    padding: 10px 16px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#add-expense button:hover {
+    background-color: #246B45;
+}
+/* CSS Box Model - Page Heading */
+header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Add Expense Card */
+#add-expense {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+
+/* Expense Table Card */
+.expenses-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #CCCCCC;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1F3A5F;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #EAF2F8;
 }
-tr:hover {
-    background-color: #e0e0e0;
-}
-button {
-    cursor: pointer;
-}
-/* Advanced CSS Selectors */
 
-/* 1. Descendant selector */
-#add-expense input {
+tr:hover {
+    background-color: #D6E4F0;
+}
+
+/* Form Inputs */
+#add-expense input,
+#add-expense select {
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
 }
 
-/* 2. Position pseudo-class */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* 3. Negation pseudo-class */
-input:not([type="date"]) {
-    border-radius: 4px;
-}
-
-/* 4. Focus pseudo-class */
-input:focus {
-    outline: 2px solid #4CAF50;
-}
-
-/* Button cursor */
-button {
+/* Button */
+#add-expense button {
+    padding: 10px 16px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2E8B57;
+    color: white;
     cursor: pointer;
-}
-
-/* Table row hover */
-tr:hover {
-    background-color: #e0e0e0;
 }
