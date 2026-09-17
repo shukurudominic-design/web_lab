@@ -1,131 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Budget Tracker</title>
+
+    <title>Budget Tracker Dashboard</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-<<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
 
 <body>
 
-    <header>
-    <img src="logo.png" alt="Budget Tracker Logo" width="50">
-    <h1>My Budget Tracker</h1>
-</header>
+    <!-- Dashboard Container -->
+    <div class="dashboard">
 
-    <section id="add-expense">
-    <h2>Add Expense</h2>
-    <section>
-       <section id="video-section">
-    <h2>Budgeting Tips</h2>
+        <!-- Sidebar / Navigation -->
+        <aside class="sidebar">
 
-    <iframe
-        width="560"
-        height="315"
-        src="https://youtube.com/shorts/FJnEWXy_99s?si=wTUWKe3oCHzIRZOd/VIDEO_ID"
-        title="Budgeting Tips Video"
-        frameborder="0">
-    </iframe>
-</section> 
+            <div class="sidebar-logo">
+                <img src="logo.png" alt="Budget Tracker Logo" width="50">
+                <h2>Budget Tracker</h2>
+            </div>
 
-    <form>
-        <label for="expense-name">Expense Name:</label>
-        <input type="text" id="expense-name" name="expense-name">
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#expenses">Expenses</a>
+                <a href="#add-expense">Add Expense</a>
+                <a href="#savings">Savings</a>
+                <a href="#reports">Reports</a>
+                <a href="#settings">Settings</a>
+            </nav>
 
-        <label for="expense-amount">Amount:</label>
-        <input type="number" id="expense-amount" name="expense-amount">
+        </aside>
 
-        <label for="expense-category">Category:</label>
-        <select id="expense-category" name="expense-category">
-            <option value="Food">Food</option>
-            <option value="Transport">Transport</option>
-            <option value="Rent">Rent</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Other">Other</option>
-        </select>
 
-        <label for="expense-date">Date:</label>
-        <input type="date" id="expense-date" name="expense-date">
+        <!-- Main Content -->
+        <main class="main-content">
 
-        <button type="button">Add Expense</button>
-    </form>
-    <details>
-    <summary>How to use this tracker</summary>
-    <p>
-        Enter the expense name, amount, category, and date in the form.
-        Click the Add Expense button to submit your expense.
-        The expense table displays your recorded expenses.
-    </p>
-</details>
-</section>
+            <!-- Dashboard Header -->
+            <header class="dashboard-header">
 
-        <label for="expense-name">Expense Name:</label>
-        <input type="text" id="expense-name" placeholder="Enter expense name">
+                <div>
+                    <h1>Financial Dashboard</h1>
+                    <p>Track your spending and manage your budget.</p>
+                </div>
 
-        <br><br>
+                <div class="balance">
+                    <span>Total Budget</span>
+                    <strong>KSh 50,000</strong>
+                </div>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="Enter amount">
+            </header>
 
-        <br><br>
 
-        <label for="category">Category:</label>
-        <input type="text" id="category" placeholder="Enter category">
-    </section>
+            <!-- Monthly Expense Categories -->
+            <section class="category-section" aria-labelledby="monthly-expenses-heading">
 
-    <section class="expenses-section">
-        <h2>Your Expenses</h2>
-        <table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Category</th>
-            <th>Date</th>
-        </tr>
-    </thead>
+                <h2 id="monthly-expenses-heading">Monthly Expenses</h2>
 
-    <tbody>
-        <tr>
-            <td>Groceries</td>
-            <td>KSh 2,500</td>
-            <td>Food</td>
-            <td>2026-09-01</td>
-        </tr>
+                <div class="category-grid">
 
-        <tr>
-            <td>Bus Fare</td>
-            <td>KSh 300</td>
-            <td>Transport</td>
-            <td>2026-09-02</td>
-        </tr>
+                    <!-- Food Card -->
+                    <article class="category-card">
+                        <h3>Food</h3>
+                        <p class="amount">KSh 8,500</p>
+                        <span>17% of budget</span>
+                    </article>
 
-        <tr>
-            <td>Internet</td>
-            <td>KSh 1,500</td>
-            <td>Utilities</td>
-            <td>2026-09-03</td>
-        </tr>
+                    <!-- Transport Card -->
+                    <article class="category-card">
+                        <h3>Transport</h3>
+                        <p class="amount">KSh 4,200</p>
+                        <span>8.4% of budget</span>
+                    </article>
 
-        <tr>
-            <td>School Supplies</td>
-            <td>KSh 1,200</td>
-            <td>Education</td>
-            <td>2026-09-04</td>
-        </tr>
+                    <!-- Rent Card -->
+                    <article class="category-card">
+                        <h3>Rent</h3>
+                        <p class="amount">KSh 15,000</p>
+                        <span>30% of budget</span>
+                    </article>
 
-        <tr>
-            <td>Lunch</td>
-            <td>KSh 500</td>
-            <td>Food</td>
-            <td>2026-09-05</td>
-        </tr>
-    </tbody>
-</table>
-    </section>
+                    <!-- Entertainment Card -->
+                    <article class="category-card">
+                        <h3>Entertainment</h3>
+                        <p class="amount">KSh 3,000</p>
+                        <span>6% of budget</span>
+                    </article>
+
+                    <!-- Savings Card -->
+                    <article class="category-card savings" id="savings">
+                        <h3>Savings</h3>
+                        <p class="amount">KSh 10,000</p>
+                        <span>20% of budget</span>
+                    </article>
+
+                    <!-- Utilities Card -->
+                    <article class="category-card">
+                        <h3>Utilities</h3>
+                        <p class="amount">KSh 5,300</p>
+                        <span>10.6% of budget</span>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Monthly Summary -->
+            <section class="summary-card" id="reports">
+
+                <h2>Monthly Summary</h2>
+
+                <p>
+                    Total Spending:
+                    <strong>KSh 36,000</strong>
+                </p>
+
+                <p>
+                    Remaining Budget:
+                    <strong>KSh 14,000</strong>
+                </p>
+
+            </section>
+
+
+            <!-- Add Expense Form -->
+            <section id="add-expense">
+
+                <h2>Add Expense</h2>
+
+                <form>
+
+                    <label for="expense-name">Expense Name:</label>
+                    <input
+                        type="text"
+                        id="expense-name"
+                        name="expense-name"
+                        placeholder="Enter expense name"
+                        required
+                    >
+
+                    <label for="expense-amount">Amount:</label>
+                    <input
+                        type="number"
+                        id="expense-amount"
+                        name="expense-amount"
+                        placeholder="Enter amount"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                    <label for="expense-category">Category:</label>
+
+                    <select id="expense-category" name="expense-category" required>
+                        <option value="">Select a category</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Education">Education</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="expense-date">Date:</label>
+
+                    <input
+                        type="date"
+                        id="expense-date"
+                        name="expense-date"
+                        required
+                    >
+
+                    <button type="submit">Add Expense</button>
+
+                </form>
+
+                <!-- How to Use -->
+                <details>
+
+                    <summary>How to use this tracker</summary>
+
+                    <p>
+                        Enter the expense name, amount, category, and date.
+                        Click the Add Expense button to record your expense.
+                    </p>
+
+                </details>
+
+            </section>
+
+
+            <!-- Expense Table -->
+            <section class="expenses-section" id="expenses">
+
+                <h2>Your Expenses</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Groceries</td>
+                            <td>KSh 2,500</td>
+                            <td>Food</td>
+                            <td>2026-09-01</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bus Fare</td>
+                            <td>KSh 300</td>
+                            <td>Transport</td>
+                            <td>2026-09-02</td>
+                        </tr>
+
+                        <tr>
+                            <td>Internet</td>
+                            <td>KSh 1,500</td>
+                            <td>Utilities</td>
+                            <td>2026-09-03</td>
+                        </tr>
+
+                        <tr>
+                            <td>School Supplies</td>
+                            <td>KSh 1,200</td>
+                            <td>Education</td>
+                            <td>2026-09-04</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lunch</td>
+                            <td>KSh 500</td>
+                            <td>Food</td>
+                            <td>2026-09-05</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- Budgeting Tips Video -->
+            <section id="video-section">
+
+                <h2>Budgeting Tips</h2>
+
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/FJnEWXy_99s"
+                    title="Budgeting Tips Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </section>
+
+
+            <!-- Settings Section -->
+            <section id="settings" class="summary-card">
+
+                <h2>Budget Settings</h2>
+
+                <p>
+                    Monthly budget limit:
+                    <strong>KSh 50,000</strong>
+                </p>
+
+                <p>
+                    Review your expenses regularly to stay within your budget.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
 
 </body>
+
 </html>
