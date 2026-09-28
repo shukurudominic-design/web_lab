@@ -87,3 +87,29 @@ Provides an overview of the project, its features, technologies, and file struct
 ## Author
 
 Shukuru Dominic
+
+# SpendWise
+
+SpendWise is a simple budget tracking application designed to help users manage their budget and expenses. The project combines HTML, CSS, and JavaScript to create a simple and user-friendly budgeting application.
+
+## JavaScript Concepts Implemented
+
+The project demonstrates several JavaScript concepts, including:
+
+- Variables
+- Data types
+- User input
+- Number conversion
+- Calculations
+- Functions
+- Console output
+
+## Variables
+
+Variables are used to store important budgeting information such as the user's budget, total expenses, and remaining balance.
+
+For example:
+
+```javascript
+let budget = prompt("Enter your monthly budget:");
+budget = Number(budget);
