@@ -38,8 +38,8 @@
    ============================== */
 
 .sidebar {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--brand-color);
+    color: var(--surface-color);
     padding: 20px;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .sidebar-logo h2 {
-    color: var(--white);
+    color: var(--surface-color);
     font-size: 20px;
     margin: 0;
 }
@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     padding: 12px 15px;
-    color: var(--white);
+    color: var(--surface-color);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -79,7 +79,7 @@
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: var(--secondary);
+    background-color: var(--accent-color);
 }
 
 
@@ -90,7 +90,7 @@
 .main-content {
     min-width: 0;
     padding: 30px;
-    background-color: var(--background);
+    background-color: var(--background-color);
 }
 
 
@@ -104,11 +104,11 @@
     align-items: center;
     gap: 20px;
 
-    background-color: var(--white);
+    background-color: var(--surface-color);
     padding: 20px;
     margin-bottom: 25px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -128,7 +128,7 @@
 
 .balance strong {
     font-size: 24px;
-    color: var(--button);
+    color: var(--button-color);
 }
 
 
@@ -152,10 +152,10 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: var(--white);
+    background-color: var(--surface-color);
     padding: 20px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
@@ -172,29 +172,29 @@
 .category-card h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--secondary);
+    color: var(--accent-color);
 }
 
 .category-card .amount {
     margin: 10px 0;
     font-size: 24px;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--brand-color);
 }
 
 .category-card span {
-    color: var(--text);
+    color: var(--primary-text);
     font-size: 14px;
 }
 
 
 /* Savings card */
 .category-card.savings {
-    border-top: 4px solid var(--button);
+    border-top: 4px solid var(--button-color);
 }
 
 .category-card.savings h3 {
-    color: var(--button);
+    color: var(--button-color);
 }
 
 
@@ -207,11 +207,11 @@
     flex-direction: column;
     gap: 5px;
 
-    background-color: var(--white);
+    background-color: var(--surface-color);
     padding: 20px;
     margin-top: 25px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -225,12 +225,12 @@
    ============================== */
 
 #add-expense {
-    background-color: var(--white);
+    background-color: var(--surface-color);
     padding: 20px;
     margin-top: 25px;
     margin-bottom: 20px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -245,7 +245,7 @@
     width: 100%;
     padding: 10px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
     font-family: 'Open Sans', sans-serif;
@@ -256,8 +256,8 @@
     padding: 10px 16px;
     margin-top: 5px;
 
-    background-color: var(--button);
-    color: var(--green);
+    background-color: var(--button-color);
+    color: var(--surface-color);
 
     border: none;
     border-radius: 5px;
@@ -276,11 +276,11 @@
    ============================== */
 
 .expenses-section {
-    background-color: var(--blue);
+    background-color: var(--surface-color);
     padding: 20px;
     margin-bottom: 20px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -294,12 +294,12 @@ th,
 td {
     padding: 12px;
     text-align: left;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
 }
 
 th {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--brand-color);
+    color: var(--surface-color);
 }
 
 tr:nth-child(even) {
@@ -316,11 +316,11 @@ tr:hover {
    ============================== */
 
 #video-section {
-    background-color: var(--white);
+    background-color: var(--surface-color);
     padding: 20px;
     margin-bottom: 20px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -337,14 +337,14 @@ details {
     margin-top: 20px;
     padding: 10px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
     background-color: var(--light-row);
 }
 
 summary {
-    color: var(--primary);
+    color: var(--brand-color);
     font-weight: 600;
     cursor: pointer;
 }
@@ -458,4 +458,29 @@ summary {
 .category-card:focus {
     transform: translateY(-4px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+/* ==============================
+   BUDGET FEEDBACK
+   ============================== */
+
+.budget-message {
+    margin: 8px 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.budget-message.success {
+    background-color: #E8F5E9;
+    color: #246B45;
+}
+
+.budget-message.caution {
+    background-color: #FFF8E1;
+    color: #8A6500;
+}
+
+.budget-message.warning {
+    background-color: #FFEBEE;
+    color: #B71C1C;
 }

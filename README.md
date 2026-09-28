@@ -113,3 +113,38 @@ For example:
 ```javascript
 let budget = prompt("Enter your monthly budget:");
 budget = Number(budget);
+
+# SpendWise Interactive
+
+SpendWise is an interactive budgeting dashboard that lets users add expenses and see their budget information update on the webpage.
+
+## JavaScript concepts implemented
+
+### 1. Decision Making
+`if`, `else if`, and `else` statements check the remaining budget and display appropriate feedback.
+
+### 2. Multiple Records
+An `expenses` array stores multiple expense objects containing the name, amount, category, and date.
+
+### 3. Loops
+`forEach()` and `Object.keys().forEach()` process expense records and category totals.
+
+### 4. DOM Manipulation
+JavaScript updates the expense table, category cards, total spending, remaining budget, and budget feedback directly on the webpage.
+
+### 5. User Interactions
+An `addEventListener("submit", ...)` event listener handles the Add Expense form without using browser prompts.
+
+### 6. Connected Functionality
+When a user submits an expense:
+1. The form values are collected.
+2. A new record is added to the `expenses` array.
+3. The totals are recalculated.
+4. The expense table and dashboard cards are updated.
+5. Budget feedback is displayed.
+
+## Files
+
+- `index.html` — dashboard structure and form
+- `style.css` — page styling and responsive layout
+- `script.js` — interactive budgeting logic
