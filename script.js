@@ -1,3 +1,4 @@
+
 // SpendWise JavaScript
 
 // Function to calculate the remaining balance
@@ -5,20 +6,54 @@ function calculateBalance(budget, expenses) {
     return budget - expenses;
 }
 
-// Collect budget from the user
-let budget = prompt("Enter your monthly budget:");
-budget = Number(budget);
+// Collect information only when the user requests it
+function collectBudgetInformation() {
+    let budget = prompt("Enter your monthly budget:");
 
-// Collect expenses from the user
-let totalExpenses = prompt("Enter your total expenses:");
-totalExpenses = Number(totalExpenses);
+    // Stop if the user cancels
+    if (budget === null) {
+        return;
+    }
 
-// Calculate the remaining balance
-let remainingBalance = calculateBalance(budget, totalExpenses);
+    let totalExpenses = prompt("Enter your total expenses:");
 
-// Display clearly labeled results in the console
-console.log("===== SpendWise Budget Summary =====");
-console.log("Monthly Budget: KES", budget);
-console.log("Total Expenses: KES", totalExpenses);
-console.log("Remaining Balance: KES", remainingBalance);
-console.log("====================================");
+    if (totalExpenses === null) {
+        return;
+    }
+
+    // Convert input into numbers
+    budget = Number(budget);
+    totalExpenses = Number(totalExpenses);
+
+    // Validate the information
+    if (
+        budget < 0 ||
+        totalExpenses < 0 ||
+        budget === "" ||
+        totalExpenses === "" ||
+        !Number.isFinite(budget) ||
+        !Number.isFinite(totalExpenses)
+    ) {
+        alert("Please enter valid positive numbers.");
+        return;
+    }
+
+    // Calculate remaining balance
+    let remainingBalance = calculateBalance(budget, totalExpenses);
+
+    // Display results in the browser console
+    console.log("===== SpendWise Budget Summary =====");
+    console.log("Monthly Budget: KES", budget);
+    console.log("Total Expenses: KES", totalExpenses);
+    console.log("Remaining Balance: KES", remainingBalance);
+    console.log("====================================");
+}
+
+// Wait for the page to load before connecting the button
+document.addEventListener("DOMContentLoaded", function () {
+    const calculateButton = document.getElementById("calculate-budget");
+
+    if (calculateButton) {
+        calculateButton.addEventListener("click", collectBudgetInformation);
+    }
+});
