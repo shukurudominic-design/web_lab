@@ -148,3 +148,58 @@ When a user submits an expense:
 - `index.html` — dashboard structure and form
 - `style.css` — page styling and responsive layout
 - `script.js` — interactive budgeting logic
+# SpendWise – Budget Tracker
+
+## Project Description
+
+SpendWise is a simple budget tracking web application designed to help users understand their monthly budget, track expenses, and calculate their remaining balance.
+
+The application uses HTML, CSS, and JavaScript to provide a simple and user-friendly budgeting experience.
+
+## Technologies Used
+
+- HTML5 – Application structure
+- CSS3 – Styling, typography, colors, and layout
+- JavaScript – User input, variables, calculations, and functions
+- Git and GitHub – Version control and project hosting
+- Netlify – Website deployment and automatic updates
+
+## GitHub Repository Information
+
+**Repository Name:** web_lab
+
+**GitHub Repository:** https://github.com/shukurudominic-design/web_lab
+
+## Live Netlify Website
+
+**Live Website URL: https://spendwiseprojec.netlify.app
+
+## Deployment Process Summary
+
+1. Completed the SpendWise application using HTML, CSS, and JavaScript.
+2. Uploaded the project files to a public GitHub repository.
+3. Connected the GitHub repository to Netlify.
+4. Configured Netlify to publish the root project directory.
+5. Deployed the application and received a live website URL.
+6. Tested the live website to confirm that its files and JavaScript functionality worked.
+7. Updated the project and pushed the changes to GitHub.
+8. Verified that Netlify automatically deployed the latest changes.
+
+## Challenges Encountered During Deployment
+
+Some challenges encountered during deployment included understanding the GitHub and Netlify connection process, configuring the correct publishing directory, and checking that the JavaScript file loaded correctly on the live website.
+
+## Lessons Learned
+
+Through this project, I learned how to:
+
+- Deploy a website using Netlify.
+- Connect a GitHub repository to Netlify.
+- Publish a website to the internet.
+- Configure automatic deployments.
+- Test a live website.
+- Use Git commands to update and maintain a project.
+
+## Author
+
+Shukuru Dominic
