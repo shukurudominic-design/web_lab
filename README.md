@@ -172,7 +172,7 @@ The application uses HTML, CSS, and JavaScript to provide a simple and user-frie
 
 ## Live Netlify Website
 
-**Live Website URL:** [INSERT YOUR ACTUAL NETLIFY URL HERE]
+**Live Website URL: https://spendwiseprojec.netlify.app
 
 ## Deployment Process Summary
 
